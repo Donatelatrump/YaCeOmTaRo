@@ -118,22 +118,100 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="fondo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dev" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dev.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="44-447042_blue-shapes-png-transparent-png1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\44-447042_blue-shapes-png-transparent-png1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="visual-dijkstra-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\visual-dijkstra-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="beat street background 12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\beat street background 12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="31351" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\31351.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Illustration-PNG-Photo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Illustration-PNG-Photo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Permu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Permu1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="descargar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\descargar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1combinacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1combinacion.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="doggo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\doggo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="2combinacion1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2combinacion1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="au-os-blue-shape@2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\au-os-blue-shape@2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Permu2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Permu2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Landing_page" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Landing_page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grafo completo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grafo completo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download-background-biru-hd-221" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download-background-biru-hd-221.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="652031" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\652031.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="png-transparent-tree-line-graph-theory-vertex-planar-graph-path-counterexample-cubic-graph-mathematician" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-transparent-tree-line-graph-theory-vertex-planar-graph-path-counterexample-cubic-graph-mathematician.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="85b7a900-b8f0-11eb-92ca-f9a8d80447b8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\85b7a900-b8f0-11eb-92ca-f9a8d80447b8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UAA-LOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UAA-LOGO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="beat street background 11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\beat street background 11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="descargar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\descargar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="293-2936392_vector-png-image-blue-abstract-png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\293-2936392_vector-png-image-blue-abstract-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download-background-biru-hd-22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download-background-biru-hd-22.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="65203" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\65203.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1combinacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1combinacion.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="beat street background 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\beat street background 1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="65206" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\65206.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="permu3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\permu3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aplicaciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aplicaciones.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brochure-1356182_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brochure-1356182_960_720.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="44-447042_blue-shapes-png-transparent-png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\44-447042_blue-shapes-png-transparent-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="85b7a900-b8f0-11eb-92ca-f9a8d80447b81" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\85b7a900-b8f0-11eb-92ca-f9a8d80447b81.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

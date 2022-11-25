@@ -30,7 +30,6 @@ namespace YaCeOmTaRo
             {
                 conjunto[x] = (char)(x + 65);
             }
-            
             for (uint x=0;x < r; x++)
             {
                 for (int y = 0; y < n; y++)
@@ -40,13 +39,16 @@ namespace YaCeOmTaRo
                     {
                         a += conjunto[y];
                     }
-
                 }
                 listBox1.Items.Add(a);
                 a = "";
             }
-            
+        }
 
+        private void ConjuntoP_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            listBox1.Items.Clear();
+            textBox1.Text = "";
         }
     }
 }
