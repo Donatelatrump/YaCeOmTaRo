@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3863F68E-EB7B-4B7E-83BD-FC7C1735A1D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>YaCeOmTaRo</RootNamespace>
+    <AssemblyName>YaCeOmTaRo</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp.Pro, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.Pro.6.1.1\lib\net472\FontAwesome.Sharp.Pro.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.4.5.1\lib\net47\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.4.5.1\lib\net47\WebDriver.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algoritmos_de_expancion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Algoritmos_de_expancion.Designer.cs">
+      <DependentUpon>Algoritmos_de_expancion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Big O.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Big O.Designer.cs">
+      <DependentUpon>Big O.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadenasChidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadenasChidas.Designer.cs">
+      <DependentUpon>CadenasChidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caracterizar_Grafo_Bipartito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caracterizar_Grafo_Bipartito.Designer.cs">
+      <DependentUpon>Caracterizar_Grafo_Bipartito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Combinaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Combinaciones.Designer.cs">
+      <DependentUpon>Combinaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConversionGlobals.cs" />
+    <Compile Include="Dijkstra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dijkstra.designer.cs">
+      <DependentUpon>Dijkstra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Donde_Aplicar_Los_Algoritmos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donde_Aplicar_Los_Algoritmos.Designer.cs">
+      <DependentUpon>Donde_Aplicar_Los_Algoritmos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnchuraProfundidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnchuraProfundidad.Designer.cs">
+      <DependentUpon>AnchuraProfundidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompConexas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompConexas.Designer.cs">
+      <DependentUpon>CompConexas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grafos Bipartitos.cs" />
+    <Compile Include="MatrizAdy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatrizAdy.Designer.cs">
+      <DependentUpon>MatrizAdy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kcosas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kcosas.Designer.cs">
+      <DependentUpon>kcosas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PotenciaYBinarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PotenciaYBinarios.designer.cs">
+      <DependentUpon>PotenciaYBinarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Saber_Si_Es_Arbol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Saber_Si_Es_Arbol.Designer.cs">
+      <DependentUpon>Saber_Si_Es_Arbol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TangibleVectorHelper.cs" />
+    <EmbeddedResource Include="Algoritmos_de_expancion.resx">
+      <DependentUpon>Algoritmos_de_expancion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnchuraProfundidad.resx">
+      <DependentUpon>AnchuraProfundidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Big O.resx">
+      <DependentUpon>Big O.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadenasChidas.resx">
+      <DependentUpon>CadenasChidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caracterizar_Grafo_Bipartito.resx">
+      <DependentUpon>Caracterizar_Grafo_Bipartito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Combinaciones.resx">
+      <DependentUpon>Combinaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompConexas.resx">
+      <DependentUpon>CompConexas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dijkstra.resx">
+      <DependentUpon>Dijkstra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Donde_Aplicar_Los_Algoritmos.resx">
+      <DependentUpon>Donde_Aplicar_Los_Algoritmos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kcosas.resx">
+      <DependentUpon>kcosas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatrizAdy.resx">
+      <DependentUpon>MatrizAdy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PotenciaYBinarios.resx">
+      <DependentUpon>PotenciaYBinarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Saber_Si_Es_Arbol.resx">
+      <DependentUpon>Saber_Si_Es_Arbol.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descargar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1combinacion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2combinacion1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Permu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Permu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\permu3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UAA-LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Illustration-PNG-Photo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Landing_page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doggo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aplicaciones.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\44-447042_blue-shapes-png-transparent-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\44-447042_blue-shapes-png-transparent-png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\au-os-blue-shape%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\293-2936392_vector-png-image-blue-abstract-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beat street background 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-background-biru-hd-22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brochure-1356182_960_720.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-tree-line-graph-theory-vertex-planar-graph-path-counterexample-cubic-graph-mathematician.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grafo completo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\85b7a900-b8f0-11eb-92ca-f9a8d80447b8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-background-biru-hd-221.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beat street background 11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\65203.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\652031.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\65206.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31351.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beat street background 12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visual-dijkstra-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\85b7a900-b8f0-11eb-92ca-f9a8d80447b81.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.107.0.5304.6200\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.107.0.5304.6200\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.107.0.5304.6200\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.107.0.5304.6200\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+  </Target>
+</Project>
