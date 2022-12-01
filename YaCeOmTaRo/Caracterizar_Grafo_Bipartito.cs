@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 using System.Windows.Media;
+using System.Linq.Expressions;
 
 namespace YaCeOmTaRo
 {
@@ -23,19 +24,27 @@ namespace YaCeOmTaRo
             button4.Enabled = false;
             button5.Enabled = false;
             comboBox2.Enabled = false;
+            textBox1.Enabled = false;
 
         }
        
 private void button1_Click(object sender, EventArgs e)//Lista de adyacencia
         {
             panel1.Show();
+            panel2.Hide();
 
         }
+        string l = "6";
         private void button2_Click(object sender, EventArgs e)//Matriz de adyacencia
         {
             panel1.Show();
             panel2.Show();
-          
+            comboBox5.Enabled = false;
+            comboBox6.Enabled = false;
+            button9.Enabled = false;
+            button8.Enabled = false;
+            
+                
         }
 
         private void button3_Click(object sender, EventArgs e)//Metodo Distinto
@@ -44,6 +53,7 @@ private void button1_Click(object sender, EventArgs e)//Lista de adyacencia
         }
 
         int x;
+        int[,] lista2 = new int[10, 10];
         private void button6_Click(object sender, EventArgs e)
         {
             button4.Enabled = true;
@@ -51,8 +61,8 @@ private void button1_Click(object sender, EventArgs e)//Lista de adyacencia
             button6.Enabled = false;
             comboBox1.Enabled = false;
             comboBox2.Enabled = true;
-            
-             x = Convert.ToInt32(comboBox1.Text);
+           
+            x = Convert.ToInt32(comboBox1.Text);
             int l = 0;
             for (int i = 1; i <= x; i++)//Añade los vertices de 1 en 1 hasta el numero de vertices elegidos
             {
@@ -65,44 +75,80 @@ private void button1_Click(object sender, EventArgs e)//Lista de adyacencia
                 comboBox3.Items.Add("" + (l + 1));
                 l++;
             }
-            
+
+
         }
 
+        
+        int f;
+        string respuesta = "";
+        string texto = "";
+        bool ar = false;
+        int temo=1;
         private void button4_Click(object sender, EventArgs e)//Agregar elemento 1 panel
         {
             int a, s;
-           
-                a = Convert.ToInt32(comboBox3.Text);
-                s = Convert.ToInt32(comboBox2.Text);
-                switch (a)
+            
+            a = Convert.ToInt32(comboBox3.Text);
+            s = Convert.ToInt32(comboBox2.Text);
+            f = Convert.ToInt32(comboBox1.Text);
+            List<List<int>> lista = new List<List<int>>();
+
+            for (int i = 0; i < f; i++)
+            {
+                for (int j = 0; j < f; j++)
                 {
-                    case 1:
-               
-                  
-          
+                    lista2[i, j] = 0;
+                }
+                
+            }
+            if (temo != a)
+            {
+                ar = false;
+                texto += Environment.NewLine;
+            }
 
+            for (int i = 0; i < f; i++)
+            {
+                for (int j = 0; j < f; j++)
+                {
+                    if (a == i + 1)
+                    {
 
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        break;
-                    case 4:
-                        break;
-                    case 5:
-                        break;
-                    case 6:
-                        break;
+                        lista2[i, s - 1] = 1;
+
+                    }
+                    if (lista2[i, j] == 1)
+                    {
+                        
+                        if (ar != true)
+                        {
+                            texto += "" + (i + 1) + " -->  " + (j + 1);
+                           
+                            
+                        }
+                        else
+                        {
+                            texto += " --->  " + (j + 1);
+                       
+                        }
+                    }
+                }
                 
 
             }
-            comboBox3.SelectedIndex=0;
-            comboBox2.SelectedIndex = 0;
+            ar = true;
+   
+        
+            temo = a;
+            textBox2.Text = texto;
+            respuesta = texto;
         }
-
-        private void button5_Click(object sender, EventArgs e) //Siguiente elemento 1 panel
+       
+        private void button5_Click(object sender, EventArgs e) //Finalizar panel 1
         {
-
+            respuesta+= Environment.NewLine + Globals.Maiz(lista2, f.ToString());
+            
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e) 
@@ -114,19 +160,19 @@ private void button1_Click(object sender, EventArgs e)//Lista de adyacencia
         string matriz = "";
         private void button7_Click(object sender, EventArgs e)//generar matriz
         {
-            
-         
+            comboBox5.Enabled = true;
+            comboBox6.Enabled = true;
+            button9.Enabled = true;
+            button8.Enabled = true;
+
             m = Convert.ToInt32(comboBox4.Text);
            
             //imprime la matriz inicial 
             for (int i = 0; i < m; i++)
             {
-                for (int j = 0; j <= m; j++)
+                for (int j = 0; j < m; j++)
                 {
-                    
-                    
                     matriz_adyacencia[i, j] = 0;
-                    matriz_adyacencia[i, 0] = i + 1;
                     matriz += "" + matriz_adyacencia[i, j] + "   ";
                 }
                 if (i != m)
@@ -134,9 +180,6 @@ private void button1_Click(object sender, EventArgs e)//Lista de adyacencia
                     comboBox5.Items.Add(i + 1);
                     comboBox6.Items.Add(i + 1);
                 }
-
-               
-                 
                 matriz += Environment.NewLine;
             }
             textBox1.Text = matriz;
@@ -153,18 +196,18 @@ private void button1_Click(object sender, EventArgs e)//Lista de adyacencia
             {
                 System.Windows.MessageBox.Show("El arista no puede estar apuntando a si mismo");
                 comboBox5.SelectedIndex = 0;
-                comboBox6.SelectedIndex = 0;
+                comboBox6.SelectedIndex = 1;
                 a = 0; b = 0;
             }
             string linea = "";
             for(int i = 0; i < m; i++)
             {
-                for(int j=0;j<= m; j++)
+                for(int j=0; j< m; j++)
                 {
-                    if(a == matriz_adyacencia[i, j])
+                    if(a == i+1)
                     {
                       
-                            matriz_adyacencia[i, j+b] = 9;
+                            matriz_adyacencia[i, b-1] = 1;
                         
                     }
                     linea += "" + matriz_adyacencia[i, j] + "   ";
@@ -173,58 +216,59 @@ private void button1_Click(object sender, EventArgs e)//Lista de adyacencia
             }
             textBox1.Text = linea;
             linea = "";
-            comboBox5.SelectedIndex = 0;
-            comboBox6.SelectedIndex = 0;
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            /*  bool DFS(Graph const &graph, int v, vector< bool > &discovered, vector<int> & color)
-  {
-                  // hacer para cada borde (v, u)
-                  for (int u: graph.adjList[v])
-                  {
-                      // si se explora el vértice `u` por primera vez
-                      if (!discovered[u])
-                      {
-                          // marca el nodo actual como descubierto
-                          discovered[u] = true;
+            
+            label7.Text = Globals.Maiz(matriz_adyacencia, l);
 
-                          // el nodo actual tiene el color opuesto al de su padre
-                          color[u] = !color[v];
+        }
 
-                          // si DFS en cualquier subárbol enraizado en `v` devuelve falso
-                          if (!DFS(graph, u, discovered, color))
-                          {
-                              return false;
-                          }
-                      }
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
 
-                      // si el vértice ya fue descubierto y el color del vértice
-                      // `u` y `v` son iguales, entonces el graph no es bipartito
-                      else if (color[v] == color[u])
-                      {
-                          return false;
-                      }
-                  }
+        }
 
-                  return true;
-              }
-            */
-            bool[,] mat = new bool[10, 10];
-            for(int i = 0; i < m; i++)
-            {
-                for(int j = 0; j <= m; j++)
-                {
-                    mat[i, j] = false;
-                    if (matriz_adyacencia[i, j] == 9)
-                    {
-                        mat[i, j] = true;
-                    }    
 
-                }
-            }
+        private void comboBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
 
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

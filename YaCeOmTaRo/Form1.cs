@@ -223,8 +223,16 @@ namespace YaCeOmTaRo
                     }
                     break;
                 case 2: //Formas para hacer el pareo de un grafo normal
-                    break;
+                    using (var xxx = new apareamiento_normal())
+                    {
+                        xxx.ShowDialog();
+                    }
+                        break;
                 case 3: //Formas de hacer el pareo de un grafo bipartito
+                    using (var ccc = new Pareamiento_Bipartito())
+                    {
+                        ccc.ShowDialog();
+                    }
                     break;
                 case 4: //Problemas correspondientes de pareo de grafos
                     break;
@@ -274,7 +282,14 @@ namespace YaCeOmTaRo
 
         }
 
-     
-    
+        private void comboBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }

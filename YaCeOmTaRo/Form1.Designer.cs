@@ -161,6 +161,7 @@
             this.comboBox4.Size = new System.Drawing.Size(233, 21);
             this.comboBox4.TabIndex = 10;
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            this.comboBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox4_KeyPress);
             // 
             // comboBox3
             // 
@@ -177,6 +178,7 @@
             this.comboBox3.Size = new System.Drawing.Size(233, 21);
             this.comboBox3.TabIndex = 9;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.comboBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox3_KeyPress);
             // 
             // panel2
             // 

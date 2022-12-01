@@ -51,18 +51,24 @@ namespace YaCeOmTaRo
         }
         public static bool todosvisitados(bool[] visitado, int nodos)
         {
-            for(int x=0; x<nodos; x++)
+            if (nodos > 0)
             {
-                if (visitado[x] == false)
+                for (int x = 0; x < nodos; x++)
                 {
-                    return false; 
+                    if (visitado[x] == false)
+                    {
+                        break;
+                        return false;
+                    }
+                    else
+                    {
+                        break;
+                        return true;
+                    }
+
                 }
-                else
-                {
-                    return true;
-                }
-                
             }
+            
             return true;
         }
         private void BTGRecorrido_Click(object sender, EventArgs e)

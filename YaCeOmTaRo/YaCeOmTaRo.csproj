@@ -41,6 +41,9 @@
     <Reference Include="FontAwesome.Sharp.Pro, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.Pro.6.1.1\lib\net472\FontAwesome.Sharp.Pro.dll</HintPath>
     </Reference>
+    <Reference Include="GraphLib, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Wilgnne.GraphLib.1.0.2\lib\GraphLib.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -69,6 +72,12 @@
     </Compile>
     <Compile Include="Algoritmos_de_expancion.Designer.cs">
       <DependentUpon>Algoritmos_de_expancion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="apareamiento_normal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="apareamiento_normal.Designer.cs">
+      <DependentUpon>apareamiento_normal.cs</DependentUpon>
     </Compile>
     <Compile Include="Big O.cs">
       <SubType>Form</SubType>
@@ -125,7 +134,6 @@
     <Compile Include="CompConexas.Designer.cs">
       <DependentUpon>CompConexas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Grafos Bipartitos.cs" />
     <Compile Include="MatrizAdy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +145,12 @@
     </Compile>
     <Compile Include="kcosas.Designer.cs">
       <DependentUpon>kcosas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pareamiento_Bipartito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pareamiento_Bipartito.Designer.cs">
+      <DependentUpon>Pareamiento_Bipartito.cs</DependentUpon>
     </Compile>
     <Compile Include="PotenciaYBinarios.cs">
       <SubType>Form</SubType>
@@ -152,12 +166,14 @@
     <Compile Include="Saber_Si_Es_Arbol.Designer.cs">
       <DependentUpon>Saber_Si_Es_Arbol.cs</DependentUpon>
     </Compile>
-    <Compile Include="TangibleVectorHelper.cs" />
     <EmbeddedResource Include="Algoritmos_de_expancion.resx">
       <DependentUpon>Algoritmos_de_expancion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AnchuraProfundidad.resx">
       <DependentUpon>AnchuraProfundidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="apareamiento_normal.resx">
+      <DependentUpon>apareamiento_normal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Big O.resx">
       <DependentUpon>Big O.cs</DependentUpon>
@@ -188,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MatrizAdy.resx">
       <DependentUpon>MatrizAdy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pareamiento_Bipartito.resx">
+      <DependentUpon>Pareamiento_Bipartito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PotenciaYBinarios.resx">
       <DependentUpon>PotenciaYBinarios.cs</DependentUpon>

@@ -1,90 +1,83 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 
 public static class Globals
 {
-	// Realiza DFS en el graph a partir del v�rtice `v`
-	public static bool DFS(in Graph graph, int v, List<bool> discovered, List<int> color)
+
+	/*
+	Bipartito:
+	0 0 1 1 0 1
+	0 0 0 0 1 1
+	1 0 0 0 0 0
+	1 0 0 0 0 0
+	0 1 0 0 0 0
+	1 1 0 0 0 0
+	
+	No bipartito:
+	0 0 1 1 0 1
+	0 0 0 0 1 1
+	1 0 0 0 0 0
+	1 0 0 0 0 0
+	0 1 0 0 0 1
+	1 1 0 0 1 0
+	*/
+
+	public static string Maiz(int[,] matriz,string aveces)
 	{
-		// hacer para cada borde (v, u)
-		foreach (int u in graph.adjList[v])
+
+		int n=0;
+		n = Convert.ToInt32(aveces);
+        bool[,] ady = new bool[n, n];
+        for (int i = 0; i < n; i++)
 		{
-			// si se explora el v�rtice `u` por primera vez
-			if (!discovered[u])
+            for(int j = 0; j < n; j++)
 			{
-				// marca el nodo actual como descubierto
-				discovered[u] = true;
-
-				// el nodo actual tiene el color opuesto al de su padre
-				color[u] = color[v] == 0 ? 1 : 0;
-
-				// si DFS en cualquier sub�rbol enraizado en `v` devuelve falso
-				if (!DFS(graph, u, discovered, color))
+				if (matriz[i, j] == 0)
 				{
-					return false;
+					ady[i, j] = false;
 				}
+				else
+				{
+                    ady[i, j] = true;
+                    
+                    }
 			}
+		}
+            int[] colores = new int[n];
 
-			// si el v�rtice ya fue descubierto y el color del v�rtice
-			// `u` y `v` son iguales, entonces el graph no es bipartito
-			else if (color[v] == color[u])
+		int origen = 0;
+
+		colores[origen] = 1;
+
+        Stack<int> myStack = new Stack<int>();
+        myStack.Push(origen);
+
+		while (myStack.Count != 0)
+		{
+            origen = (int)myStack.First();
+			myStack.Pop();
+            
+
+			for (int x = 0; x < n; x++)
 			{
-				return false;
+				MessageBox.Show("matriz  " + matriz[origen, x]);
+                if (matriz[origen,x]!=0 && (colores[x] == 0))
+				{
+                    MessageBox.Show("Entre en el primer if");
+                    colores[x] = colores[origen] * -1; 
+				}
+                
+                if (matriz[origen,x]!=0 && (colores[origen] == colores[x]))
+                {
+                    return "No es bipartito";
+                }
+               
 			}
 		}
 
-		return true;
+        return ("Es bipartito");
 	}
-
-	// Funci�n para verificar si un graph es bipartito usando DFS
-	public static bool isBipartite(in Graph graph)
-	{
-		// para realizar un seguimiento de si se descubre un v�rtice o no
-		List<bool> discovered = new List<bool>(new bool[graph.n]);
-
-		// realizar un seguimiento del color asignado (0 o 1) a cada v�rtice en DFS
-		List<int> color = new List<int>(new int[graph.n]);
-
-		// comienza desde cualquier nodo ya que el grafo es conectado y no dirigido
-		int src = 0;
-
-		// marca el v�rtice de origen como descubierto y establece su color en 0
-		discovered[src] = true; color[src] = 0;
-
-		// llamar al procedimiento DFS
-		return DFS(graph, src, discovered, color);
-	}
-
-   public  static void Maiz()
-	{
-		// vector de los bordes del graph
-		List<Edge> edges = new List<Edge>();
-		edges.Insert(0, new Edge { src = 0, dest = 1 });
-		edges.Insert(1, new Edge { src = 1, dest = 2 });
-		edges.Insert(1, new Edge { src = 1, dest = 7 });
-		edges.Insert(2, new Edge { src = 2, dest = 3 });
-		edges.Insert(3, new Edge { src = 3, dest = 5 });
-		edges.Insert(4, new Edge { src = 4, dest = 6 });
-		edges.Insert(4, new Edge { src = 4, dest = 8 });
-		edges.Insert(7, new Edge { src = 7, dest = 8 });
-		edges.Insert(1, new Edge { src = 1, dest = 3 });
-		// n�mero total de nodos en el graph (0 a 8)
-		int n = 9;
-
-		// construye un graph a partir de los bordes dados
-		Graph graph = new Graph(edges, n);
-
-		if (isBipartite(graph))
-		{
-			MessageBox.Show("El Grafo es Bipartito");
-		}
-		else
-		{
-            MessageBox.Show("El grafo no es Bipartito");
-		}
-
-	}
-
-
 }
