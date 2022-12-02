@@ -16,6 +16,8 @@ namespace YaCeOmTaRo
         {
             InitializeComponent();
             panel1.Hide();
+            MinimizeBox = false;
+            MaximizeBox = false;
         }
 
         private void button1_Click(object sender, EventArgs e)//Tonto

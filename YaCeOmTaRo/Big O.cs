@@ -17,7 +17,8 @@ namespace YaCeOmTaRo
         public Big_O()
         {
             InitializeComponent();
-
+            MinimizeBox = false;
+            MaximizeBox = false;
             label3.Text = "";
             label2.Text = "";
             textBox1.Text = "";

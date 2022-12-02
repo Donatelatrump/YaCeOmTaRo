@@ -21,6 +21,8 @@ namespace YaCeOmTaRo
         public Algoritmos_de_expancion()
         {
             InitializeComponent();
+            MinimizeBox = false;
+            MaximizeBox = false;
             TB_PRIM_numerosnodos.Text = "2";
             Panel_Prim.Hide();
             BT_PRIM_IniciarAlgoritmo.Enabled = false;

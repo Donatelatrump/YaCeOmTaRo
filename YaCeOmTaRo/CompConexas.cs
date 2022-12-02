@@ -25,6 +25,8 @@ namespace YaCeOmTaRo
         public CompConexas()
         {
             InitializeComponent();
+            MinimizeBox = false;
+            MaximizeBox = false;
             TBAristas.Text = "";
             TBComponentes.Text = "";
             TBNodos.Text = "";

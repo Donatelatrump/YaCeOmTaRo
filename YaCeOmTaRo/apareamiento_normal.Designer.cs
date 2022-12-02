@@ -221,6 +221,8 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "apareamiento_normal";
             this.Text = "apareamiento_normal";
             this.panel1.ResumeLayout(false);

@@ -18,6 +18,8 @@ namespace YaCeOmTaRo
         public ConjuntoPotenciaBinario()
         {
             InitializeComponent();
+            MinimizeBox = false;
+            MaximizeBox = false;
         }
 
         private void label1_Click(object sender, EventArgs e)

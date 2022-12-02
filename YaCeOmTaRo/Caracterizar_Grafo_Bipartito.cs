@@ -21,6 +21,8 @@ namespace YaCeOmTaRo
         {
             InitializeComponent();
             panel1.Hide();
+            MinimizeBox = false;
+            MaximizeBox = false;
             button4.Enabled = false;
             button5.Enabled = false;
             comboBox2.Enabled = false;

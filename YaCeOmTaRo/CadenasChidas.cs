@@ -15,6 +15,8 @@ namespace YaCeOmTaRo
         public CadenasChidas()
         {
             InitializeComponent();
+            MinimizeBox = false;
+            MaximizeBox = false;
         }
         int decima = 0;
         int[] binario = new int[100];

@@ -19,6 +19,8 @@ namespace YaCeOmTaRo
         public Saber_Si_Es_Arbol()
         {
             InitializeComponent();
+            MinimizeBox = false;
+            MaximizeBox = false;
             TB_Numeronodos.Text = "2";
             
         }

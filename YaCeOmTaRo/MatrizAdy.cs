@@ -20,6 +20,8 @@ namespace YaCeOmTaRo
         public MatrizAdy()
         {
             InitializeComponent();
+            MinimizeBox = false;
+            MaximizeBox = false;
             TBNodos.Text = ""; 
             TBAristas.Text = "";
             TBCNodo.Text = "";

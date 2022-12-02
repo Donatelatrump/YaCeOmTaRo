@@ -15,6 +15,8 @@ namespace YaCeOmTaRo
         public ConjuntoP()
         {
             InitializeComponent();
+            MinimizeBox = false;
+            MaximizeBox = false;
         }
         static int n = 0;
         int r = 0;

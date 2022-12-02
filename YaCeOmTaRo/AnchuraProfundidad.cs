@@ -25,6 +25,8 @@ namespace YaCeOmTaRo
         public AnchuraProfundidad()
         {
             InitializeComponent();
+            MinimizeBox = false;
+            MaximizeBox = false;
             panel1.Hide();
             panel2.Hide();
             TBCNodo.Text = "";

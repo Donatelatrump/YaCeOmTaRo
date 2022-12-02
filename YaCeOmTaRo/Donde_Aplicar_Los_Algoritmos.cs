@@ -15,6 +15,8 @@ namespace YaCeOmTaRo
         public Donde_Aplicar_Los_Algoritmos()
         {
             InitializeComponent();
+            MinimizeBox = false;
+            MaximizeBox = false;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

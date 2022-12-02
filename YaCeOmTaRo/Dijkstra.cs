@@ -17,6 +17,8 @@ namespace YaCeOmTaRo
         public Dijkstra()
         {
             InitializeComponent();
+            MinimizeBox = false;
+            MaximizeBox = false;
         }
 
         private void btnMatriz_Click(object sender, EventArgs e)
