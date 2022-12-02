@@ -57,18 +57,16 @@ namespace YaCeOmTaRo
                 {
                     if (visitado[x] == false)
                     {
-                        break;
                         return false;
                     }
                     else
                     {
-                        break;
                         return true;
                     }
 
                 }
             }
-            
+          
             return true;
         }
         private void BTGRecorrido_Click(object sender, EventArgs e)
