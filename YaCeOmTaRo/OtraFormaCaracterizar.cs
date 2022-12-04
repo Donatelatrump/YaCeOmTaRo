@@ -21,6 +21,8 @@ namespace YaCeOmTaRo
         public OtraFormaCaracterizar()
         {
             InitializeComponent();
+            MaximizeBox = false;
+            MinimizeBox = false;
             BTGuardar.Visible = false;
             BTMostrar.Visible = false;
             LBMA.Visible = false;

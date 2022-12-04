@@ -19,6 +19,8 @@ namespace YaCeOmTaRo
         public PareoMaximo_GNormal()
         {
             InitializeComponent();
+            MinimizeBox = false;
+            MaximizeBox = false;
             Guardar.Visible = false;
             BTPareo.Visible = false;
             Pareo.Visible = false;
