@@ -136,6 +136,7 @@
     <Compile Include="CompConexas.Designer.cs">
       <DependentUpon>CompConexas.cs</DependentUpon>
     </Compile>
+    <Compile Include="GFG.cs" />
     <Compile Include="MatrizAdy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,11 +149,29 @@
     <Compile Include="kcosas.Designer.cs">
       <DependentUpon>kcosas.cs</DependentUpon>
     </Compile>
+    <Compile Include="OtraFormaCaracterizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtraFormaCaracterizar.Designer.cs">
+      <DependentUpon>OtraFormaCaracterizar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pareamiento_Bipartito.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pareamiento_Bipartito.Designer.cs">
       <DependentUpon>Pareamiento_Bipartito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PareoMaximo_GNormal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PareoMaximo_GNormal.Designer.cs">
+      <DependentUpon>PareoMaximo_GNormal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PareoTonto_GNormal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PareoTonto_GNormal.Designer.cs">
+      <DependentUpon>PareoTonto_GNormal.cs</DependentUpon>
     </Compile>
     <Compile Include="PotenciaYBinarios.cs">
       <SubType>Form</SubType>
@@ -207,8 +226,17 @@
     <EmbeddedResource Include="MatrizAdy.resx">
       <DependentUpon>MatrizAdy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OtraFormaCaracterizar.resx">
+      <DependentUpon>OtraFormaCaracterizar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pareamiento_Bipartito.resx">
       <DependentUpon>Pareamiento_Bipartito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PareoMaximo_GNormal.resx">
+      <DependentUpon>PareoMaximo_GNormal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PareoTonto_GNormal.resx">
+      <DependentUpon>PareoTonto_GNormal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PotenciaYBinarios.resx">
       <DependentUpon>PotenciaYBinarios.cs</DependentUpon>

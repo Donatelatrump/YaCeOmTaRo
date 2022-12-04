@@ -37,7 +37,10 @@ namespace YaCeOmTaRo
          * */
         private void button1_Click(object sender, EventArgs e) //activar panel de tonto
         {
-
+            using (var pT = new PareoTonto_GNormal())
+            {
+                pT.ShowDialog();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e) //activar panel de perfecto
@@ -47,7 +50,10 @@ namespace YaCeOmTaRo
 
         private void button2_Click(object sender, EventArgs e)//activar panel de maximo
         {
-
+            using (var pM = new PareoMaximo_GNormal())
+            {
+                pM.ShowDialog();
+            }
         }
 
         private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)

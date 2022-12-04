@@ -12,6 +12,9 @@ using System.Windows.Forms.VisualStyles;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 using System.Windows.Media;
 using System.Linq.Expressions;
+using System.Windows.Controls;
+using System.IO;
+using System.Diagnostics;
 
 namespace YaCeOmTaRo
 {
@@ -27,6 +30,7 @@ namespace YaCeOmTaRo
             button5.Enabled = false;
             comboBox2.Enabled = false;
             textBox1.Enabled = false;
+            
 
         }
        
@@ -51,7 +55,10 @@ private void button1_Click(object sender, EventArgs e)//Lista de adyacencia
 
         private void button3_Click(object sender, EventArgs e)//Metodo Distinto
         {
-
+            using (var OT = new OtraFormaCaracterizar())
+            {
+                OT.ShowDialog();
+            }
         }
 
         int x;
@@ -271,6 +278,21 @@ private void button1_Click(object sender, EventArgs e)//Lista de adyacencia
         private void comboBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTGuardar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BTCrear_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
