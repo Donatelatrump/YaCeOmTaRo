@@ -28,7 +28,10 @@ namespace YaCeOmTaRo
 
         private void button2_Click(object sender, EventArgs e)//Maximo
         {
-
+            using (PareoBipartitoMaximo maxBip = new PareoBipartitoMaximo())
+            {
+                maxBip.ShowDialog();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e) //Perfecto

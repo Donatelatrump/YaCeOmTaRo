@@ -161,6 +161,12 @@
     <Compile Include="Pareamiento_Bipartito.Designer.cs">
       <DependentUpon>Pareamiento_Bipartito.cs</DependentUpon>
     </Compile>
+    <Compile Include="PareoBipartitoMaximo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PareoBipartitoMaximo.Designer.cs">
+      <DependentUpon>PareoBipartitoMaximo.cs</DependentUpon>
+    </Compile>
     <Compile Include="PareoMaximo_GNormal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pareamiento_Bipartito.resx">
       <DependentUpon>Pareamiento_Bipartito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PareoBipartitoMaximo.resx">
+      <DependentUpon>PareoBipartitoMaximo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PareoMaximo_GNormal.resx">
       <DependentUpon>PareoMaximo_GNormal.cs</DependentUpon>
