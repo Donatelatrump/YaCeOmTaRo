@@ -22,6 +22,10 @@ namespace YaCeOmTaRo
         int[,] matriz; //Matriz de adyacencias
         int xPos = 100, yPos = 120; //Posiciones de las etiquetas y textbox
         int[] pares; //Vector con los nodos expuestos y pares
+        //Para la comprobación de bipartito
+        List<int> grupo1 = new List<int>();
+        List<int> grupo2 = new List<int>();
+        List<int> visitados = new List<int>();
         public PareoBipartitoMaximo()
         {
             InitializeComponent();
@@ -107,10 +111,65 @@ namespace YaCeOmTaRo
 
         private void btnPareo_Click(object sender, EventArgs e)
         {
-            Inicializar();
-            Pareo();
+            if (Bipartito())
+            {
+                Inicializar();
+                Pareo();
+            }
+            else MessageBox.Show("El grafo no es bipartito", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            
         }
+        //División de dos grupos, para saber si es bipartito
+        private void Division(int actual, List<int> grupoActual, List<int> otroGrupo)
+        {
+            grupoActual.Add(actual); //Se inserta el nodo actual al grupo correspondiente
+            visitados.Add(actual); //Se inserta a los nodos ya visitados
+                                   //cout << " Inserto " << actual;
+                                   //Variables para saber el total de nodos adyacentes y cuáles son
+            int ady = 0;
+            int[] nodos = new int[n];
 
+            for (int i = 0; i < n; i++)
+            { //Recorrer las aristas del nodo actual
+              //Si no se ha visitado ya el nodo y existe una arista
+                if (!visitados.Contains(i) && matriz[actual, i] != 0)
+                {
+                    //Se ingresa el nodo al arreglo y aumentan los adyacentes
+                    nodos[ady] = i;
+                    ady++;
+                }
+            }
+            for (int i = 0; i < ady; i++)
+            {
+                //Se llama de nuevo a la función, para ingresar los nodos adyacentes al otro grupo y recorrer sus respectivos nodos adyacentes
+                Division(nodos[i], otroGrupo, grupoActual);
+            }
+        }
+        //Para comprobar si es bipartito o no
+        private bool Bipartito()
+        {
+            Division(0, grupo1, grupo2);
+            bool bipart = true; //Saber si es bipartito;
+
+            //En caso de que no sea conexo
+            if (visitados.Count() < n)
+            {
+                MessageBox.Show("El grafo no es conexo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                for (int i = 0; i < n; i++)
+                {
+                    //Se verifica si los vertices no se encuentran en ambos grupos 
+                    if (grupo1.Contains(i) && grupo2.Contains(i))
+                    {
+                        bipart = false; //Si está en ambos grupos, no es bipartito
+                    }
+                }
+            }
+            return bipart;
+        }
+        //Inicializar los pares
         private void Inicializar()
         {
             for(int i = 0; i < n; i++)
@@ -186,7 +245,7 @@ namespace YaCeOmTaRo
             while (cola.Any())
             {
                 //Si está expuesto, se selecciona
-                if (pares[cola.Peek()] == -1)
+                if (pares[cola.Peek()] < 0)
                 {
                     ruta[i + 1] = cola.Dequeue();
                     //Reinicia los elementos después de esa posición
@@ -220,7 +279,7 @@ namespace YaCeOmTaRo
             }
             else
             {
-                pares[ruta[0]] = -2; //No es posible realizar un par
+                pares[ruta[0]] = -2; //No es posible realizar un par, por el momento
             }
         }
         private void PareoBipartitoMaximo_Load(object sender, EventArgs e)

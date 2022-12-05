@@ -106,6 +106,12 @@
       <DependentUpon>Combinaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="ConversionGlobals.cs" />
+    <Compile Include="DFS_Dirigido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DFS_Dirigido.Designer.cs">
+      <DependentUpon>DFS_Dirigido.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dijkstra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CompConexas.resx">
       <DependentUpon>CompConexas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DFS_Dirigido.resx">
+      <DependentUpon>DFS_Dirigido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dijkstra.resx">
       <DependentUpon>Dijkstra.cs</DependentUpon>
