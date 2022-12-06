@@ -250,6 +250,8 @@ namespace YaCeOmTaRo
                 case 1: //Formas de mostrar garfos dirigidos ponderados o no
                     break;
                 case 2: //Metodo de anchura y profundidad para grafos bipartitos
+                    using (DFSyBFS_Dirigidos dir = new DFSyBFS_Dirigidos())
+                        dir.ShowDialog();
                     break;
                 case 3: //Comparacion de DFS y BFS en grafos dirigidos y grafos no dirigidos
                     break;

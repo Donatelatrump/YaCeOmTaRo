@@ -106,6 +106,12 @@
       <DependentUpon>Combinaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="ConversionGlobals.cs" />
+    <Compile Include="DFSyBFS_Dirigidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DFSyBFS_Dirigidos.Designer.cs">
+      <DependentUpon>DFSyBFS_Dirigidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="DFS_Dirigido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CompConexas.resx">
       <DependentUpon>CompConexas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DFSyBFS_Dirigidos.resx">
+      <DependentUpon>DFSyBFS_Dirigidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DFS_Dirigido.resx">
       <DependentUpon>DFS_Dirigido.cs</DependentUpon>

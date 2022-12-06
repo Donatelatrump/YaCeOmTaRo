@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblPares = new System.Windows.Forms.Label();
-            this.btnPareo = new System.Windows.Forms.Button();
+            this.lblDFS = new System.Windows.Forms.Label();
+            this.btnDFS = new System.Windows.Forms.Button();
             this.btnMatriz = new System.Windows.Forms.Button();
             this.lblMatriz = new System.Windows.Forms.Label();
             this.lblNodos = new System.Windows.Forms.Label();
@@ -37,36 +37,39 @@
             this.cmbTamaño = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblInicio = new System.Windows.Forms.Label();
+            this.cmbInicio = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // lblPares
+            // lblDFS
             // 
-            this.lblPares.AutoSize = true;
-            this.lblPares.BackColor = System.Drawing.Color.Transparent;
-            this.lblPares.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.lblPares.Location = new System.Drawing.Point(158, 511);
-            this.lblPares.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPares.Name = "lblPares";
-            this.lblPares.Size = new System.Drawing.Size(61, 19);
-            this.lblPares.TabIndex = 32;
-            this.lblPares.Text = "Pares:";
-            this.lblPares.Visible = false;
+            this.lblDFS.AutoSize = true;
+            this.lblDFS.BackColor = System.Drawing.Color.Transparent;
+            this.lblDFS.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDFS.Location = new System.Drawing.Point(299, 516);
+            this.lblDFS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDFS.Name = "lblDFS";
+            this.lblDFS.Size = new System.Drawing.Size(46, 19);
+            this.lblDFS.TabIndex = 32;
+            this.lblDFS.Text = "DFS:";
+            this.lblDFS.Visible = false;
             // 
-            // btnPareo
+            // btnDFS
             // 
-            this.btnPareo.BackColor = System.Drawing.Color.White;
-            this.btnPareo.Enabled = false;
-            this.btnPareo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnPareo.FlatAppearance.BorderSize = 3;
-            this.btnPareo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPareo.Location = new System.Drawing.Point(50, 506);
-            this.btnPareo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnPareo.Name = "btnPareo";
-            this.btnPareo.Size = new System.Drawing.Size(100, 32);
-            this.btnPareo.TabIndex = 31;
-            this.btnPareo.Text = "Obtener pares";
-            this.btnPareo.UseVisualStyleBackColor = false;
-            this.btnPareo.Visible = false;
+            this.btnDFS.BackColor = System.Drawing.Color.White;
+            this.btnDFS.Enabled = false;
+            this.btnDFS.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnDFS.FlatAppearance.BorderSize = 3;
+            this.btnDFS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDFS.Location = new System.Drawing.Point(191, 504);
+            this.btnDFS.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnDFS.Name = "btnDFS";
+            this.btnDFS.Size = new System.Drawing.Size(100, 47);
+            this.btnDFS.TabIndex = 31;
+            this.btnDFS.Text = "Obtener recorrido DFS";
+            this.btnDFS.UseVisualStyleBackColor = false;
+            this.btnDFS.Visible = false;
+            this.btnDFS.Click += new System.EventHandler(this.btnDFS_Click);
             // 
             // btnMatriz
             // 
@@ -178,13 +181,41 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "DFS Grafos Dirigidos";
             // 
+            // lblInicio
+            // 
+            this.lblInicio.AutoSize = true;
+            this.lblInicio.BackColor = System.Drawing.Color.Transparent;
+            this.lblInicio.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.lblInicio.Location = new System.Drawing.Point(53, 504);
+            this.lblInicio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInicio.Name = "lblInicio";
+            this.lblInicio.Size = new System.Drawing.Size(98, 19);
+            this.lblInicio.TabIndex = 34;
+            this.lblInicio.Text = "Nodo inicial:";
+            this.lblInicio.Visible = false;
+            // 
+            // cmbInicio
+            // 
+            this.cmbInicio.BackColor = System.Drawing.Color.White;
+            this.cmbInicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbInicio.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.cmbInicio.FormattingEnabled = true;
+            this.cmbInicio.Location = new System.Drawing.Point(66, 527);
+            this.cmbInicio.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbInicio.Name = "cmbInicio";
+            this.cmbInicio.Size = new System.Drawing.Size(69, 27);
+            this.cmbInicio.TabIndex = 33;
+            this.cmbInicio.Visible = false;
+            // 
             // DFS_Dirigido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 576);
-            this.Controls.Add(this.lblPares);
-            this.Controls.Add(this.btnPareo);
+            this.Controls.Add(this.lblInicio);
+            this.Controls.Add(this.cmbInicio);
+            this.Controls.Add(this.lblDFS);
+            this.Controls.Add(this.btnDFS);
             this.Controls.Add(this.btnMatriz);
             this.Controls.Add(this.lblMatriz);
             this.Controls.Add(this.lblNodos);
@@ -201,8 +232,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblPares;
-        private System.Windows.Forms.Button btnPareo;
+        private System.Windows.Forms.Label lblDFS;
+        private System.Windows.Forms.Button btnDFS;
         private System.Windows.Forms.Button btnMatriz;
         private System.Windows.Forms.Label lblMatriz;
         private System.Windows.Forms.Label lblNodos;
@@ -210,5 +241,7 @@
         private System.Windows.Forms.ComboBox cmbTamaño;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblInicio;
+        private System.Windows.Forms.ComboBox cmbInicio;
     }
 }

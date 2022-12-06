@@ -15,6 +15,10 @@ namespace YaCeOmTaRo
         int n; //Tamaño de la matriz
         int[,] matriz; //Matriz de adyacencias
         int xPos = 100, yPos = 120; //Posiciones de las etiquetas y textbox
+        List<int> visitados = new List<int>(); //Nodos visitados
+        int inicio; //Nodo inicial
+        Stack<int> pila = new Stack<int>(); //Pila para el recorrido
+        String recorrido = "";
         public DFS_Dirigido()
         {
             InitializeComponent();
@@ -39,9 +43,33 @@ namespace YaCeOmTaRo
                     }
                 }
                 //Se activa el botón para sacar los pares
-                btnPareo.Enabled = true;
-                btnPareo.Visible = true;
-                lblPares.Visible = true;
+                btnDFS.Enabled = true;
+                btnDFS.Visible = true;
+                lblDFS.Visible = true;
+                cmbInicio.Enabled = true;
+                cmbInicio.Visible = true;
+                lblInicio.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDFS_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Se reinician los visitados y la pila
+                pila.Clear();
+                visitados.Clear();
+                inicio = int.Parse(cmbInicio.Text);
+                recorrido = inicio.ToString();
+                DFS(inicio - 1); //Se llama a la función
+                //Se imprime el resultado
+                lblDFS.Text = "DFS: " + recorrido;
+                if (visitados.Count() < n)
+                    MessageBox.Show("No hay camino que recorra todos los nodos desde el nodo inicial", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -78,6 +106,8 @@ namespace YaCeOmTaRo
                     lblVertice2.AutoSize = true;
                     lblVertice2.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
                     Controls.Add(lblVertice2);
+                    //Se añade al comboBox los nodos del que puede iniciar
+                    cmbInicio.Items.Add(i + 1);
                     for (int j = 0; j < n; j++)
                     {
                         TextBox txtArista = new TextBox();
@@ -94,6 +124,29 @@ namespace YaCeOmTaRo
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        //Método del recorrido
+        private void DFS(int actual)
+        {
+            visitados.Add(actual); //Se añade a visitados
+            for(int i = 0; i < n; i++)
+            {
+                //Si hay conexión entre el nodo actual y los demás que no se han visitado, se ingresa a la pila
+                if (matriz[actual, i] != 0 && !visitados.Contains(i))
+                {
+                    pila.Push(i);
+                    visitados.Add(i);
+                }
+            }
+            //Si la pila no está vacía, la cima se hace el nodo actual y se saca de la pila
+            if (pila.Any())
+            {
+                actual = pila.Pop();
+                recorrido += " -> " + (actual + 1);
+            }
+            else return; //Si está vacía significa que no puede seguir recorriendo
+            //Se repite mientras no se hayan visitado todos o la pila no esté vacía
+            if (visitados.Count() < n || pila.Any()) DFS(actual);
         }
     }
 }
