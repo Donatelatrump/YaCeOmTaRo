@@ -345,6 +345,7 @@
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proyecto Final YaCeOmTaRo";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -107,6 +107,7 @@ namespace YaCeOmTaRo
                     if(nodo == (i + 1)) //Solo si esta en la linea del nodo puede entrar y asignar 
                     {
                         matriz[i, conexion - 1] = 1;
+                        matriz[conexion - 1,i] = 1;
                     }
                     text += "" + matriz[i, j] + "  ";
                 }
@@ -117,75 +118,44 @@ namespace YaCeOmTaRo
         }
         private void button6_Click(object sender, EventArgs e)//genera el emparejamiento perfecto
         {
-            int s = Convert.ToInt32(comboBox1.Text);
-            string taxt = "";
-            if(pareamiento(matriz, s) == true)
+            int nodos = Convert.ToInt32(comboBox1.Text);
+            int cont = 0;
+            String texto = "";
+            //Ciclo para toda la matriz
+            for (int k = 0; k < nodos; k++)
             {
-                for (int i = 0; i < s; i++)
+                //Recorrer la linea
+                for (int i = 0; i < nodos; i++)
                 {
-                    taxt += pareja[i] + " --> " + pareja2[i];
-
-                    if (i == 1 || i == 3 || i == 5 || i == 7 || i == 9)
+                    if (matriz[k, i] == 1)
                     {
-                        taxt += Environment.NewLine;
+                        //Guardo la conexion
+                        texto += Convert.ToString((k + 1)) + "->" + Convert.ToString((i + 1)) + Environment.NewLine;
+                        //elimino todas las conexiones de la conexion 
+                        for (int j = 0; j < nodos; j++)
+                        {
+                            matriz[k, j] = 0;
+                            matriz[j, k] = 0;
+                            matriz[i, j] = 0;
+                            matriz[j, i] = 0;
+                            cont++;
+                        }
                     }
 
                 }
-                textBox1.Text = taxt;
-                taxt = "";
+            }
+            texto += Environment.NewLine;
+            if (cont == (nodos / 2))
+            {
 
+                texto += Environment.NewLine + "No tiene Pareamiento Perfecto pero este es el mejor ";
+                textBox1.Text = texto;
             }
             else
             {
-                textBox1.Text = "No hay emparejamiento perfecto";
+                textBox1.Text = texto;
             }
-
-
-
-        }
-        int[] pareja = new int[20];
-        int[] pareja2 = new int[20];
-        public bool pareamiento(int[,] matrix , int n )
-        {
-            int cont=0;
-            int num = 0;
-            int num2 = 0;
-            int num3 = Convert.ToInt32(comboBox1.Text);
-            for (int i = 0; i < num3; i++)
-            {
-                pareja[i] = 0;
-                pareja2[i] = 0;
-            }
-            for (int j = 0; j < num3; j++)
-            {
-                for (int k = 0; k < num3; k++)
-                {
-                    if (matrix[j, k] == 1)
-                    {
-                        pareja[j] = j + 1;
-                        pareja2[j] = k + 1;
-                        num = k;
-                        num2 = j;
-                        cont += 1;
-                        break;
-                       
-                    }
-                }
-                for (int l = 0; l < num3; l++)
-                {
-                    matrix[l, j] = 0;
-                    matrix[l, num] = 0;
-                }
-            }
-            if(cont == num3 / 2)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-
+            
 
         }
 
@@ -202,10 +172,13 @@ namespace YaCeOmTaRo
                     matriz[i, j] = 0;
                  
                 }
-                pareja[i] = 0;
-                pareja2[i] = 0;
             }
             panel1.Hide();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

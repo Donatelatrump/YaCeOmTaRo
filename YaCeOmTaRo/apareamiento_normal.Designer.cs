@@ -34,6 +34,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,9 +114,25 @@
             this.panel1.Size = new System.Drawing.Size(800, 344);
             this.panel1.TabIndex = 4;
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.White;
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.button7.FlatAppearance.BorderSize = 3;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(625, 259);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(160, 59);
+            this.button7.TabIndex = 9;
+            this.button7.Text = "Regresar";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 87);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(11, 76);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(414, 254);
@@ -129,7 +145,7 @@
             this.button6.FlatAppearance.BorderSize = 3;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(423, 241);
+            this.button6.Location = new System.Drawing.Point(444, 259);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(175, 61);
             this.button6.TabIndex = 7;
@@ -144,7 +160,7 @@
             this.button5.FlatAppearance.BorderSize = 3;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(673, 147);
+            this.button5.Location = new System.Drawing.Point(566, 180);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(113, 43);
             this.button5.TabIndex = 6;
@@ -159,7 +175,7 @@
             this.button4.FlatAppearance.BorderSize = 3;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(382, 26);
+            this.button4.Location = new System.Drawing.Point(521, 20);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(113, 43);
             this.button4.TabIndex = 5;
@@ -171,7 +187,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(511, 111);
+            this.label3.Location = new System.Drawing.Point(572, 140);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 20);
             this.label3.TabIndex = 4;
@@ -181,7 +197,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(196, 39);
+            this.label2.Location = new System.Drawing.Point(335, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(150, 20);
             this.label2.TabIndex = 3;
@@ -190,7 +206,7 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(645, 110);
+            this.comboBox3.Location = new System.Drawing.Point(706, 139);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(57, 21);
             this.comboBox3.TabIndex = 2;
@@ -199,7 +215,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(422, 110);
+            this.comboBox2.Location = new System.Drawing.Point(483, 139);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(57, 21);
             this.comboBox2.TabIndex = 1;
@@ -210,32 +226,17 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "",
-            "5",
+            "2",
+            "4",
             "6",
-            "7",
             "8",
-            "9",
             "10"});
-            this.comboBox1.Location = new System.Drawing.Point(104, 38);
+            this.comboBox1.Location = new System.Drawing.Point(243, 32);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(57, 21);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.White;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.button7.FlatAppearance.BorderSize = 3;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(625, 241);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(160, 59);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "Regresar";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // apareamiento_normal
             // 

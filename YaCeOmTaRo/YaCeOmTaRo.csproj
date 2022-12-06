@@ -87,6 +87,12 @@
     <Compile Include="Big O.Designer.cs">
       <DependentUpon>Big O.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bipartito_perfecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bipartito_perfecto.Designer.cs">
+      <DependentUpon>Bipartito_perfecto.cs</DependentUpon>
+    </Compile>
     <Compile Include="CadenasChidas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,7 @@
     <Compile Include="PareoMaximo_GNormal.Designer.cs">
       <DependentUpon>PareoMaximo_GNormal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pareos.cs" />
     <Compile Include="PareoTonto_GNormal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Big O.resx">
       <DependentUpon>Big O.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bipartito_perfecto.resx">
+      <DependentUpon>Bipartito_perfecto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadenasChidas.resx">
       <DependentUpon>CadenasChidas.cs</DependentUpon>
