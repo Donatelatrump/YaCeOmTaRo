@@ -57,6 +57,7 @@
             this.btnBFS.TabIndex = 4;
             this.btnBFS.Text = "BFS";
             this.btnBFS.UseVisualStyleBackColor = false;
+            this.btnBFS.Click += new System.EventHandler(this.btnBFS_Click);
             // 
             // btnDFS
             // 
@@ -84,6 +85,7 @@
             this.Controls.Add(this.label3);
             this.Name = "DFSyBFS_Dirigidos";
             this.Text = "DFSyBFS_Dirigidos";
+            this.Load += new System.EventHandler(this.DFSyBFS_Dirigidos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

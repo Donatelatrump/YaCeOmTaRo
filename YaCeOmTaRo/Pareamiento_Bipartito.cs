@@ -38,7 +38,7 @@ namespace YaCeOmTaRo
         {
 
         }
-        int[,] tonto = new int[20, 20];
+        int[,] tonto = new int[25, 25];
         private void button4_Click(object sender, EventArgs e)//generar
         {
             int num = Convert.ToInt32(comboBox1.Text);
@@ -80,8 +80,8 @@ namespace YaCeOmTaRo
             text = "";
         }
 
-        int[] pareja = new int[20];
-        int[] pareja2 = new int[20]; 
+        int[] pareja = new int[25];
+        int[] pareja2 = new int[21]; 
         private void button6_Click(object sender, EventArgs e)//pareamiento
         {
             int num = 0;
@@ -137,6 +137,26 @@ namespace YaCeOmTaRo
         private void comboBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            
+            comboBox1.SelectedIndex = -1;
+            comboBox2.SelectedIndex = -1;
+            comboBox3.SelectedIndex = -1;
+            textBox1.Text = "";
+            for (int i = 0; i < 20; i++)
+            {
+                for (int j = 0; j < 20; j++)
+                {
+                    tonto[i, j] = 0;
+                    pareja[i] = 0;
+                    pareja2[i] = 0;
+                }
+            }
+            panel1.Hide();
+
         }
     }
 }

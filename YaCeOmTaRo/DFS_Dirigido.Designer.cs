@@ -225,6 +225,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DFS_Dirigido";
             this.Text = "DFS_Dirigido";
+            this.Load += new System.EventHandler(this.DFS_Dirigido_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

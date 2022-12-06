@@ -22,6 +22,8 @@ namespace YaCeOmTaRo
         public DFS_Dirigido()
         {
             InitializeComponent();
+            MinimizeBox = false;
+            MaximizeBox = false;
         }
 
         private void btnMatriz_Click(object sender, EventArgs e)
@@ -125,6 +127,12 @@ namespace YaCeOmTaRo
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void DFS_Dirigido_Load(object sender, EventArgs e)
+        {
+
+        }
+
         //Método del recorrido
         private void DFS(int actual)
         {

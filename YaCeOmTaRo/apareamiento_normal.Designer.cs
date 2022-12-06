@@ -43,6 +43,7 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,16 +89,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("DK Lemon Yellow Sun", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.label1.Location = new System.Drawing.Point(186, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(424, 44);
+            this.label1.Size = new System.Drawing.Size(526, 42);
             this.label1.TabIndex = 3;
             this.label1.Text = "Pareo de grafos no bipartitos";
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
@@ -127,7 +129,7 @@
             this.button6.FlatAppearance.BorderSize = 3;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(477, 241);
+            this.button6.Location = new System.Drawing.Point(423, 241);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(175, 61);
             this.button6.TabIndex = 7;
@@ -220,6 +222,21 @@
             this.comboBox1.TabIndex = 0;
             this.comboBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.White;
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.button7.FlatAppearance.BorderSize = 3;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(625, 241);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(160, 59);
+            this.button7.TabIndex = 9;
+            this.button7.Text = "Regresar";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // apareamiento_normal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,5 +276,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button7;
     }
 }

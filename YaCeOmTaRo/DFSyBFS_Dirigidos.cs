@@ -15,12 +15,24 @@ namespace YaCeOmTaRo
         public DFSyBFS_Dirigidos()
         {
             InitializeComponent();
+            MinimizeBox = false;
+            MaximizeBox = false;
         }
 
         private void btnDFS_Click(object sender, EventArgs e)
         {
             using (DFS_Dirigido dfs = new DFS_Dirigido())
                 dfs.ShowDialog();
+        }
+
+        private void DFSyBFS_Dirigidos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBFS_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -70,7 +70,7 @@ namespace YaCeOmTaRo
         {
             e.Handled = true;
         }
-        int[,] matriz = new int[10, 10];
+        int[,] matriz = new int[20, 20];
         private void button4_Click(object sender, EventArgs e)//Genera matriz de pareo perfecto
         {
             int n;
@@ -187,6 +187,25 @@ namespace YaCeOmTaRo
             }
 
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            comboBox1.SelectedIndex = -1;
+            comboBox2.SelectedIndex = -1;
+            comboBox3.SelectedIndex = -1;
+            for (int i = 0; i < 20; i++)
+            {
+                for(int j = 0; j < 20; j++)
+                {
+                    matriz[i, j] = 0;
+                 
+                }
+                pareja[i] = 0;
+                pareja2[i] = 0;
+            }
+            panel1.Hide();
         }
     }
 }
