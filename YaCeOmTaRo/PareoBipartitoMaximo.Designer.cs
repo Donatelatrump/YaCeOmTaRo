@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PareoBipartitoMaximo));
             this.btnMatriz = new System.Windows.Forms.Button();
             this.lblMatriz = new System.Windows.Forms.Label();
             this.lblNodos = new System.Windows.Forms.Label();
@@ -193,6 +194,7 @@
             this.Controls.Add(this.cmbTamaño);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PareoBipartitoMaximo";
             this.Text = "PareoBipartitoMáximo";
             this.Load += new System.EventHandler(this.PareoBipartitoMaximo_Load);

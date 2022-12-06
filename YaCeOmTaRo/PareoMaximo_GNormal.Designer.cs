@@ -135,11 +135,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.SandyBrown;
-            this.label2.Font = new System.Drawing.Font("DK Lemon Yellow Sun", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.SaddleBrown;
             this.label2.Location = new System.Drawing.Point(200, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(398, 38);
+            this.label2.Size = new System.Drawing.Size(515, 37);
             this.label2.TabIndex = 12;
             this.label2.Text = "Pareo Máximo de un Grafo Normal";
             // 
@@ -168,6 +168,7 @@
             this.Controls.Add(this.LBMA);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PareoMaximo_GNormal";
             this.Text = "PareoMaximo_GNormal";
             this.ResumeLayout(false);

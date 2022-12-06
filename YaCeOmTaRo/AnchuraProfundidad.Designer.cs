@@ -582,6 +582,8 @@
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AnchuraProfundidad";
             this.Text = "Recorridos de un grafo";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AnchuraProfundidad_FormClosed);

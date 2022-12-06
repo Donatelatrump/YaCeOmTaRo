@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PareoTonto_GNormal));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.LBMA = new System.Windows.Forms.Label();
@@ -54,11 +55,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label2.Font = new System.Drawing.Font("DK Lemon Yellow Sun", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label2.Location = new System.Drawing.Point(198, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(385, 38);
+            this.label2.Size = new System.Drawing.Size(487, 37);
             this.label2.TabIndex = 1;
             this.label2.Text = "Pareo Tonto de un Grafo Normal";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -173,8 +174,10 @@
             this.Controls.Add(this.LBMA);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PareoTonto_GNormal";
             this.Text = "PareoTonto_GNormal";
+            this.Load += new System.EventHandler(this.PareoTonto_GNormal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

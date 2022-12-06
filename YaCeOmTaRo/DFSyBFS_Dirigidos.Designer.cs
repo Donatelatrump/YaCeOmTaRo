@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DFSyBFS_Dirigidos));
             this.label3 = new System.Windows.Forms.Label();
             this.btnBFS = new System.Windows.Forms.Button();
             this.btnDFS = new System.Windows.Forms.Button();
@@ -83,6 +84,7 @@
             this.Controls.Add(this.btnDFS);
             this.Controls.Add(this.btnBFS);
             this.Controls.Add(this.label3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DFSyBFS_Dirigidos";
             this.Text = "DFSyBFS_Dirigidos";
             this.Load += new System.EventHandler(this.DFSyBFS_Dirigidos_Load);

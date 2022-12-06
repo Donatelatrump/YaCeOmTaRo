@@ -150,6 +150,11 @@ namespace YaCeOmTaRo
 
         }
 
+        private void PareoTonto_GNormal_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void Tamaño_SelectedIndexChanged(object sender, EventArgs e)
         {
             
