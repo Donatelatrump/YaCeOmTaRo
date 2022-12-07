@@ -18,6 +18,10 @@ namespace YaCeOmTaRo
             InitializeComponent();
             panel1.Hide();
             textBox1.Enabled = false;
+            comboBox2.Enabled = false;
+            comboBox3.Enabled = false;
+            button5.Enabled = false;
+            button6.Enabled = false;
         }
         /*Grafo usado para pareo perfecto
          * 0 1 1 0 0 0
@@ -73,6 +77,13 @@ namespace YaCeOmTaRo
         int[,] matriz = new int[20, 20];
         private void button4_Click(object sender, EventArgs e)//Genera matriz de pareo perfecto
         {
+            comboBox2.Enabled = true;
+            comboBox3.Enabled = true;
+            button5.Enabled = true;
+            button6.Enabled = true;
+            comboBox1.Enabled = false;
+            button4.Enabled = false;
+
             int n;
             string datos = "";
             n = Convert.ToInt32(comboBox1.Text);
@@ -162,9 +173,17 @@ namespace YaCeOmTaRo
         private void button7_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
+            comboBox1.Enabled = true;
+            button4.Enabled = true;
+            comboBox2.Enabled = false;
+            comboBox3.Enabled = false;
+            button5.Enabled = false;
+            button6.Enabled = false;
             comboBox1.SelectedIndex = -1;
             comboBox2.SelectedIndex = -1;
             comboBox3.SelectedIndex = -1;
+            comboBox2.Items.Clear();
+            comboBox3.Items.Clear();
             for (int i = 0; i < 20; i++)
             {
                 for(int j = 0; j < 20; j++)

@@ -18,6 +18,11 @@ namespace YaCeOmTaRo
             panel1.Hide();
             MinimizeBox = false;
             MaximizeBox = false;
+            comboBox2.Enabled = false;
+            comboBox3.Enabled = false;
+            button5.Enabled = false;
+            button6.Enabled = false;
+            button7.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)//Tonto
@@ -47,6 +52,13 @@ namespace YaCeOmTaRo
         int[,] tonto = new int[25, 25];
         private void button4_Click(object sender, EventArgs e)//generar
         {
+            comboBox1.Enabled = false;
+            button4.Enabled = false;
+            comboBox2.Enabled = true;
+            comboBox3.Enabled = true;
+            button5.Enabled = true;
+            button6.Enabled = true;
+            button7.Enabled = true;
             int num = Convert.ToInt32(comboBox1.Text);
             string text = "";
             for (int i = 0; i < num; i++)
@@ -77,6 +89,7 @@ namespace YaCeOmTaRo
                     if (i == num - 1 && j == num2 - 1)
                     {
                         tonto[i, j] = 1;
+                        tonto[j, i] = 1;
                     }
                     text = text + tonto[i, j] + "  ";
                 }
@@ -85,51 +98,35 @@ namespace YaCeOmTaRo
             textBox1.Text = text;
             text = "";
         }
-
-        int[] pareja = new int[25];
-        int[] pareja2 = new int[21]; 
         private void button6_Click(object sender, EventArgs e)//pareamiento
         {
-            int num = 0;
-            int num2 = 0;
-            int num3 = Convert.ToInt32(comboBox1.Text);
-            for (int i = 0; i < num3; i++)
+            int nodos = Convert.ToInt32(comboBox1.Text);
+            String texto = "";
+            //Ciclo para toda la matriz
+            for (int k = 0; k < nodos; k++)
             {
-                pareja[i] = 0;
-                pareja2[i] = 0;
-            }
-            for (int j = 0; j < num3; j++)
-            {
-                for (int k = 0; k < num3; k++)
+                //Recorrer la linea
+                for (int i = 0; i < nodos; i++)
                 {
-                    if (tonto[j, k] == 1)
+                    if (tonto[k, i] == 1)
                     {
-                        pareja[j] = j + 1;
-                        pareja2[j] = k + 1;
-                        num = k;
-                        num2 = j;
-                        break;
+                        //Guardo la conexion
+                        texto += Convert.ToString((k + 1)) + "->" + Convert.ToString((i + 1)) + Environment.NewLine;
+                        //elimino todas las conexiones de la conexion 
+                        for (int j = 0; j < nodos; j++)
+                        {
+                            tonto[k, j] = 0;
+                            tonto[j, k] = 0;
+                            tonto[i, j] = 0;
+                            tonto[j, i] = 0;
+                        }
                     }
-                }
-                for (int l = 0; l < num3; l++)
-                {
-                    tonto[l, j] = 0;
-                    tonto[l, num] = 0;
-                }
-            }
-            string text = "";
-            for (int m = 0; m < num3; m++)
-            {
-                if (pareja[m] != 0)
-                {
-                    text = text + pareja[m] + " --> " + pareja2[m];
-                    text += Environment.NewLine;
-                }
-            }
-            textBox1.Text = text;
-            text = "";
-        }
 
+                }
+            }
+            textBox1.Text = texto;
+        }
+       
         private void comboBox2_KeyPress(object sender, KeyPressEventArgs e)//sirven para que no editen los combobox
         {
             e.Handled = true;
@@ -147,18 +144,24 @@ namespace YaCeOmTaRo
 
         private void button7_Click(object sender, EventArgs e)
         {
-            
+            comboBox1.Enabled = true;
+            button4.Enabled = true;
+            comboBox2.Enabled = false;
+            comboBox3.Enabled = false;
+            button5.Enabled = false;
+            button6.Enabled = false;
+            button7.Enabled = false;
             comboBox1.SelectedIndex = -1;
             comboBox2.SelectedIndex = -1;
             comboBox3.SelectedIndex = -1;
+            comboBox2.Items.Clear();
+            comboBox3.Items.Clear();
             textBox1.Text = "";
             for (int i = 0; i < 20; i++)
             {
                 for (int j = 0; j < 20; j++)
                 {
                     tonto[i, j] = 0;
-                    pareja[i] = 0;
-                    pareja2[i] = 0;
                 }
             }
             panel1.Hide();

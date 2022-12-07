@@ -33,6 +33,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -69,7 +69,7 @@
             this.button2.FlatAppearance.BorderSize = 3;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(202, 117);
+            this.button2.Location = new System.Drawing.Point(229, 117);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(134, 64);
             this.button2.TabIndex = 1;
@@ -84,7 +84,7 @@
             this.button3.FlatAppearance.BorderSize = 3;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(395, 117);
+            this.button3.Location = new System.Drawing.Point(460, 117);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(134, 64);
             this.button3.TabIndex = 2;
@@ -106,8 +106,23 @@
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(575, 286);
+            this.panel1.Size = new System.Drawing.Size(641, 317);
             this.panel1.TabIndex = 3;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.White;
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.button7.FlatAppearance.BorderSize = 3;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(499, 221);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(111, 44);
+            this.button7.TabIndex = 9;
+            this.button7.Text = "Regresar";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -116,7 +131,7 @@
             this.button6.FlatAppearance.BorderSize = 3;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(269, 211);
+            this.button6.Location = new System.Drawing.Point(314, 221);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(131, 44);
             this.button6.TabIndex = 8;
@@ -131,7 +146,7 @@
             this.button5.FlatAppearance.BorderSize = 3;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(469, 109);
+            this.button5.Location = new System.Drawing.Point(535, 87);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(93, 40);
             this.button5.TabIndex = 7;
@@ -143,7 +158,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(265, 129);
+            this.label2.Location = new System.Drawing.Point(335, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 20);
             this.label2.TabIndex = 6;
@@ -177,7 +192,7 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(390, 131);
+            this.comboBox3.Location = new System.Drawing.Point(451, 100);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(59, 21);
             this.comboBox3.TabIndex = 3;
@@ -217,26 +232,11 @@
             this.textBox1.Size = new System.Drawing.Size(247, 198);
             this.textBox1.TabIndex = 0;
             // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.White;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.button7.FlatAppearance.BorderSize = 3;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(451, 211);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(111, 44);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "Regresar";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(111, 45);
+            this.label3.Location = new System.Drawing.Point(169, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(314, 24);
             this.label3.TabIndex = 4;
@@ -247,7 +247,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::YaCeOmTaRo.Properties.Resources._44_447042_blue_shapes_png_transparent_png1;
-            this.ClientSize = new System.Drawing.Size(574, 287);
+            this.ClientSize = new System.Drawing.Size(640, 315);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
