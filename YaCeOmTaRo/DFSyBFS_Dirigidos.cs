@@ -32,7 +32,11 @@ namespace YaCeOmTaRo
 
         private void btnBFS_Click(object sender, EventArgs e)
         {
-
+            //anchura
+            using (Anchura_dirigidos xd = new Anchura_dirigidos())
+            {
+                xd.ShowDialog();
+            }
         }
     }
 }

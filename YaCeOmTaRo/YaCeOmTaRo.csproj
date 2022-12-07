@@ -75,6 +75,12 @@
     <Compile Include="Algoritmos_de_expancion.Designer.cs">
       <DependentUpon>Algoritmos_de_expancion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Anchura_dirigidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Anchura_dirigidos.Designer.cs">
+      <DependentUpon>Anchura_dirigidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="apareamiento_normal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AnchuraProfundidad.resx">
       <DependentUpon>AnchuraProfundidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Anchura_dirigidos.resx">
+      <DependentUpon>Anchura_dirigidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="apareamiento_normal.resx">
       <DependentUpon>apareamiento_normal.cs</DependentUpon>
